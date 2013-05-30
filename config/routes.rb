@@ -1,4 +1,10 @@
 Iotmarket::Application.routes.draw do
+  resources :projects
+
+
+  resources :list_pins
+
+
   devise_for :users
 
   get 'about' => 'pages#about'
