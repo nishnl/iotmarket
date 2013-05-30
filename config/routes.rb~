@@ -1,13 +1,14 @@
 Iotmarket::Application.routes.draw do
   get "omniauth_callbacks/facebook"
 
-  resources :projects
-
 
   resources :list_pins
-
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   devise_for :users
+  resources :users do
+    resources :personal_infos
+    resources :projects
+  end
 
   get 'about' => 'pages#about'
 

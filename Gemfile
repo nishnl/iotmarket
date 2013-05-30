@@ -14,6 +14,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'rmagick'
 gem 'will_paginate'
+gem 'haml-rails'
 
 group :production do
 	gem 'pg'
